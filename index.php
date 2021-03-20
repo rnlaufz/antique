@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
     <title>Antique</title>
 </head>
 <body>
-    <p>In process of creation...</p>
+    <div class="container">
+    <div id="main-content">
+        <div id="info">
+        <h2>Antique</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perferendis quidem hic, unde sapiente minus assumenda ea at optio commodi totam alias laborum magni error excepturi ratione voluptatum expedita a.</p>
+        <a href="#" class="btn">Discover</a>
+        </div>
+        <div id="img-container">
+            <div></div>
+        </div>
+      
+    </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
 </body>
 </html>
