@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="shortcut icon" href="stylesheets/img/favicon.png" type="image/x-icon">
     <title>Antique</title>
 </head>
 <body>
@@ -17,6 +18,13 @@
         </div>
         <div id="img-container">
             <div></div>
+        </div>
+        <div id="status-dots-container">
+            <div class="status-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
         </div>
       
     </div>

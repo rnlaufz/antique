@@ -18,7 +18,6 @@
 }
 
 /* General styling */
-
 *{
     margin: 0;
     padding: 0;
@@ -41,6 +40,31 @@ html, body, .container{
     color: #fff;
 }
 
+/* Utils */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 50%;
+    height: 50px;
+    background-color: var(--gold-primary);
+    color: var(--light);
+    font-family: var(--title-font);
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0 0 2px var(--dark-primary);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding-left: 5px;
+    transition: background-color .3s, text-shadow .5s;
+}
+
+.btn:hover{
+    background-color: var(--gold-secondary);
+    text-shadow: 0 0 10px var(--dark-primary);
+}
+
+/* Home page */
 #main-content {
     position: absolute;
     width: 100%;
@@ -49,14 +73,43 @@ html, body, .container{
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    background: url('img/pexels-gabriel-3150757.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
 }
 
 #info{
     flex: 1;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5%;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.6);
-  
+}
+
+#info h2{
+    padding-bottom: 2%;
+    font-family: var(--title-font);
+    font-size: 34px;
+    color: var(--gold-secondary);
+    text-align: start;
+    align-self: flex-start;
+}
+
+#info p {
+    font-family: var(--text-font);
+    font-size: 22px;
+    line-height: 1.5em;
+    letter-spacing: 5px;
+}
+
+#info a {
+    text-decoration: none;
+    align-self: flex-start;
+    margin-top: 1%;
 }
 
 #img-container{
@@ -73,11 +126,42 @@ html, body, .container{
 
 #img-container div {
     margin: auto;
-    width: 90%;
+    width: 95%;
     height: 90%;
     border-radius: 50%;
     background: url('img/pexels-ruvim-3767669.jpg') no-repeat center center/cover;
     box-shadow: 0 0 10px 5px rgba(204, 172, 0, 0.7);
+}
+
+#status-dots-container{
+    width: 50px;
+    height: 150px;
+    background: transparent;
+}
+
+.status-dots {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--dark-primary);
+    background: var(--dark-primary);
+    opacity: 0.6;
+}
+
+.dot.active {
+    background: var(--gold-secondary);  
+    box-shadow: 0 0 10px var(--gold-secondary);
+    opacity: 0.7;
 }
 
 
