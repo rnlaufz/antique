@@ -21,11 +21,26 @@
         </div>
         <div id="status-dots-container">
             <div class="status-dots">
+                <div>
                 <div class="dot active"></div>
+                <div class="hide">Home</div>
+                </div>
+                <div>
                 <div class="dot"></div>
+                <div class="hide">About</div>
+                </div>
+                <div>
                 <div class="dot"></div>
+                <div class="hide">Events</div>
+                </div>
+                <div>
                 <div class="dot"></div>
+                <div class="hide">Location</div>
+                </div>
+                <div>
                 <div class="dot"></div>
+                <div class="hide">Events</div>
+                </div>
             </div>
         </div>
       

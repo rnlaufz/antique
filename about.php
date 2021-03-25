@@ -10,7 +10,14 @@
 </head>
 <body>
     <div id="about-content">
-        <div id="nav-bar"></div>
+        <div id="nav-bar">
+        <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="events.php">Events</a></li>
+        <li><a href="location.php">Location</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        </ul>
+        </div>
         <div id="info-content"></div>
         <div id="img-content">
         <div id="circle-pieces">
