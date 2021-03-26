@@ -19,28 +19,29 @@
         <div id="img-container">
             <div></div>
         </div>
-        <div id="status-dots-container">
-            <div class="status-dots">
-                <div>
+        <!-- Navigation -->
+        <div id="nav-dots-container">
+            <div class="nav-dots">
+                <a href="index.php">
                 <div class="dot active"></div>
-                <div class="hide">Home</div>
-                </div>
-                <div>
+               <div class="hide">Home</div> 
+                </a>
+                <a href="about.php">
                 <div class="dot"></div>
-                <div class="hide">About</div>
-                </div>
-                <div>
+               <div class="hide">About</div> 
+                </a>
+                <a href="events.php">
                 <div class="dot"></div>
-                <div class="hide">Events</div>
-                </div>
-                <div>
+               <div class="hide">Events</div> 
+                </a>
+                <a href="location.php">
                 <div class="dot"></div>
-                <div class="hide">Location</div>
-                </div>
-                <div>
+               <div class="hide">Location</div> 
+                </a>
+                <a href="contact.php">
                 <div class="dot"></div>
-                <div class="hide">Events</div>
-                </div>
+               <div class="hide">Contact</div> 
+                </a>
             </div>
         </div>
       
