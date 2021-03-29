@@ -305,3 +305,97 @@ a .dot:hover+.hide {
                  0 0 5px rgba(204, 172, 0, 0.3);
   
 }
+
+/* Events section */
+
+/* Location section */
+
+/* Contact section */
+
+#contact-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: darken;
+    color: var(--light);
+    font-family: var(--text-font);
+}
+
+#contact-info {
+    width: 55%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-info h2 {
+    align-self: flex-start;
+    height: 7%;
+    font-size: 26px;
+    font-family: var(--title-font);
+}
+
+#contact-info p {
+    padding: 20px 10px 10px 0;
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 1.5em;
+}
+
+#contact-icons {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #000;
+    border: solid 3px var(--gold-primary);
+    box-shadow: 0 0 10px rgba(204, 172, 0, 0.7);
+}
+
+.icon a {
+    cursor: pointer;
+    color: var(--light);
+    text-decoration: none;
+}
+
+.icon a i {
+    font-size: 22px;
+}
+
+#contact-image {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#contact-image div {
+    width: 80%;
+    height: 65%;
+    border-radius: 50%;
+    background: url(img/pexels-andreea-ch-1251720.jpg) no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+    box-shadow: 0 0 10px 5px rgba(204, 172, 0, 0.7);
+}

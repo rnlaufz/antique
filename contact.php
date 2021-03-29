@@ -9,17 +9,53 @@
     <title>Antique | Contact Us</title>
 </head>
 <body>
-
-    <div id="nav-bar"></div>
-    <div id="contact-info">
-        <h2>Header Header Header</h2>
-        <div id="icons">
-            <div class="icon"></div>
-            <div class="icon"></div>
-            <div class="icon"></div>
+    <div id="contact-container">
+        <div id="contact-info">
+        <h2>Contact Us</h2>
+        <div id="contact-icons">
+            <div class="icon">  
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="icon">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="icon">
+            <a href="#" target="_blank"><i class="far fa-envelope"></i></i></a>
+            </div>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates qui rerum error similique a quam id consequuntur, quasi tempora fugiat ut accusamus laboriosam inventore porro fugit fuga voluptate. Similique, ipsum sunt hic nesciunt doloribus eligendi mollitia delectus placeat sequi maxime a obcaecati. Corporis odit animi blanditiis deserunt, sequi voluptas quasi tempore, ex officia possimus necessitatibus nostrum asperiores magni repudiandae consequatur dolorem sint sit reiciendis iste? Tempore tenetur animi assumenda, nesciunt eius labore delectus praesentium error nostrum. Corporis, ratione voluptate quasi aperiam suscipit ullam repellat odit voluptas ab? Laudantium eaque libero, numquam a explicabo sint. Dicta sint, temporibus dolore sunt atque, illum blanditiis voluptate commodi nostrum fugit fugiat amet totam eaque ex animi optio cupiditate laudantium earum repellat. Consequuntur maxime impedit totam, quis, fugit qui doloremque consectetur ad unde, eum fugiat cumque amet neque ipsam eius repudiandae facere esse nesciunt eos incidunt. Voluptate adipisci quis consequatur labore natus illo consequuntur! Quaerat tempore eveniet unde in numquam aliquam autem amet nam quam ipsum iusto, doloribus id consequatur sit expedita delectus saepe perspiciatis aut itaque! Recusandae doloribus ea rem eligendi mollitia, doloremque necessitatibus tenetur voluptatibus! Enim culpa, voluptatibus cum nihil error beatae assumenda laboriosam! Expedita blanditiis doloremque minus voluptatum? Rerum totam iure voluptatum?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates qui rerum error similique a quam id consequuntur, quasi tempora fugiat ut accusamus laboriosam inventore porro fugit fuga voluptate. Similique, ipsum sunt hic nesciunt doloribus eligendi mollitia delectus placeat sequi maxime a obcaecati. Corporis odit animi blanditiis deserunt, sequi voluptas quasi tempore, ex officia possimus necessitatibus nostrum asperiores magni repudiandae consequatur dolorem sint sit reiciendis iste?</p>
+        </div>
+     
+        <div id="contact-image">
+            <div></div>
+        </div>
+       <!-- Navigation -->
+       <div id="nav-dots-container">
+            <div class="nav-dots">
+                <a href="index.php">
+                <div class="dot"></div>
+               <div class="hide">Home</div> 
+                </a>
+                <a href="about.php">
+                <div class="dot"></div>
+               <div class="hide">About</div> 
+                </a>
+                <a href="events.php">
+                <div class="dot"></div>
+               <div class="hide">Events</div> 
+                </a>
+                <a href="location.php">
+                <div class="dot"></div>
+               <div class="hide">Location</div> 
+                </a>
+                <a href="contact.php">
+                <div class="dot active"></div>
+               <div class="hide">Contact</div> 
+                </a>
+            </div>
+        </div>
     </div>
-
+<!-- Import fontawesome icons -->
+<script src="https://kit.fontawesome.com/415bbac1bd.js" crossorigin="anonymous"></script>
 </body>
 </html>
