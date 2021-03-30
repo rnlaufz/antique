@@ -9,9 +9,46 @@
     <title>Antique | Find Us</title>
 </head>
 <body>
-
-    <div id="nav-bar"></div>
-    <div id="location-info"></div>
+<div id="location-container">
+<div id="map-frame">
     <div id="map"></div>
+     <!-- Navigation -->
+     <div id="nav-dots-container">
+            <div class="nav-dots">
+                <a href="index.php">
+                <div class="dot"></div>
+               <div class="hide">Home</div> 
+                </a>
+                <a href="about.php">
+                <div class="dot"></div>
+               <div class="hide">About</div> 
+                </a>
+                <a href="events.php">
+                <div class="dot"></div>
+               <div class="hide">Events</div> 
+                </a>
+                <a href="location.php">
+                <div class="dot"></div>
+               <div class="hide">Location</div> 
+                </a>
+                <a href="contact.php">
+                <div class="dot active"></div>
+               <div class="hide">Contact</div> 
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="location-info">
+    <div id="loc-data">
+    <h2>Find Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, ut?</p>
+    <span>Asgard city, Trollbergsgatan Str. 17</span>
+    </div>
+      
+    
+    </div>
+    
+</div>
+   
 </body>
 </html>
