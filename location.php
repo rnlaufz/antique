@@ -12,6 +12,15 @@
 <div id="location-container">
 <div id="map-frame">
     <div id="map"></div>
+    
+    </div>
+    <div id="location-info">
+    <div id="loc-data">
+    <h2>Find Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, ut?</p>
+    <span>Asgard city, Trollbergsgatan Str. 17</span>
+    </div>
+      
      <!-- Navigation -->
      <div id="nav-dots-container">
             <div class="nav-dots">
@@ -38,17 +47,13 @@
             </div>
         </div>
     </div>
-    <div id="location-info">
-    <div id="loc-data">
-    <h2>Find Us</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, ut?</p>
-    <span>Asgard city, Trollbergsgatan Str. 17</span>
-    </div>
-      
-    
-    </div>
     
 </div>
-   
+<script src="scripts/app.js"></script>
+   <!-- Google map -->
+   <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWAqZdJsKP-CXYZO7sfgq5TbKdWBEntKQ&callback=myMap">
+</script>  
+
 </body>
 </html>
