@@ -37,11 +37,11 @@
                <div class="hide">Events</div> 
                 </a>
                 <a href="location.php">
-                <div class="dot"></div>
+                <div class="dot active"></div>
                <div class="hide">Location</div> 
                 </a>
                 <a href="contact.php">
-                <div class="dot active"></div>
+                <div class="dot"></div>
                <div class="hide">Contact</div> 
                 </a>
             </div>

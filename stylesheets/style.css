@@ -313,7 +313,7 @@ a .dot:hover+.hide {
 #location-container {
     width: 100%;
     height: 100%;
-    background-color: var(--dark-primary);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 #map-frame{
@@ -376,19 +376,27 @@ a .dot:hover+.hide {
     font-family: var(--title-font);
 }
 
+
 /* Contact section */
 
 #contact-container {
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: flex-start;
+    background: url(img/pexels-andreea-ch-1251720.jpg) no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
     color: var(--light);
     font-family: var(--text-font);
+}
+
+#contact-container #nav-dots-container {
+    position: absolute;
+    left: 94%;
 }
 
 #contact-info {
@@ -413,6 +421,7 @@ a .dot:hover+.hide {
     font-size: 20px;
     letter-spacing: 3px;
     line-height: 1.5em;
+    text-shadow: 0 0 5px #000;
 }
 
 #contact-icons {

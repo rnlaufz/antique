@@ -26,9 +26,9 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates qui rerum error similique a quam id consequuntur, quasi tempora fugiat ut accusamus laboriosam inventore porro fugit fuga voluptate. Similique, ipsum sunt hic nesciunt doloribus eligendi mollitia delectus placeat sequi maxime a obcaecati. Corporis odit animi blanditiis deserunt, sequi voluptas quasi tempore, ex officia possimus necessitatibus nostrum asperiores magni repudiandae consequatur dolorem sint sit reiciendis iste?</p>
         </div>
      
-        <div id="contact-image">
+        <!-- <div id="contact-image">
             <div></div>
-        </div>
+        </div> -->
        <!-- Navigation -->
        <div id="nav-dots-container">
             <div class="nav-dots">
