@@ -14,7 +14,7 @@
         <div id="info">
         <h2>Antique</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perferendis quidem hic, unde sapiente minus assumenda ea at optio commodi totam alias laborum magni error excepturi ratione voluptatum expedita a.</p>
-        <a href="about.php" class="btn">Discover</a>
+        <a href="events.php" class="btn">Discover</a>
         </div>
         <div id="img-container">
             <div></div>
@@ -25,10 +25,6 @@
                 <a href="index.php">
                 <div class="dot active"></div>
                <div class="hide">Home</div> 
-                </a>
-                <a href="about.php">
-                <div class="dot"></div>
-               <div class="hide">About</div> 
                 </a>
                 <a href="events.php">
                 <div class="dot"></div>

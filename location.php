@@ -28,10 +28,6 @@
                 <div class="dot"></div>
                <div class="hide">Home</div> 
                 </a>
-                <a href="about.php">
-                <div class="dot"></div>
-               <div class="hide">About</div> 
-                </a>
                 <a href="events.php">
                 <div class="dot"></div>
                <div class="hide">Events</div> 
