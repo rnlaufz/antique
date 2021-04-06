@@ -11,6 +11,7 @@
 <body>
    <div id="events-container">  
        <h1>Come and get familliar with The Antique</h1>
+       <h3>The museum is open from Monday to Friday, time 11:00-19:00. You can have some time on your own or partisipate in lecture or a tour.</h3>
 <div id="events-content">
    <div class="event-cards">
         <div class="event-card">
@@ -122,6 +123,30 @@
             </div>
         </div>
    </div>
+   <!-- Navigation -->
+   <div id="nav-dots-container">
+            <div class="nav-dots">
+                <a href="index.php">
+                <div class="dot"></div>
+               <div class="hide">Home</div> 
+                </a>
+                <a href="events.php">
+                <div class="dot active"></div>
+               <div class="hide">Events</div> 
+                </a>
+                <a href="location.php">
+                <div class="dot"></div>
+               <div class="hide">Location</div> 
+                </a>
+                <a href="contact.php">
+                <div class="dot"></div>
+               <div class="hide">Contact</div> 
+                </a>
+            </div>
+        </div>
+   </div>
+   <div id="footer">
+   <p>Antique Copyright &copy; 2021 All rights reserved | Build by /RZ</p>
    </div>
    </div>
 </body>
