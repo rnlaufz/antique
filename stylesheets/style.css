@@ -131,7 +131,7 @@ a .dot:hover+.hide {
 
 /* Home page */
 #main-content {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -197,6 +197,15 @@ a .dot:hover+.hide {
     border-radius: 50%;
     background: url('img/pexels-ruvim-3767669.jpg') no-repeat center center/cover;
     box-shadow: 0 0 10px 5px rgba(204, 172, 0, 0.7);
+}
+
+#main-content #footer {
+    position: absolute;
+    padding: 5px;
+    right: 0;
+    bottom: 0;
+    opacity: 0.2;
+    font-family: var(--title-font);
 }
 
 
@@ -364,6 +373,7 @@ a .dot:hover+.hide {
 /* Location section */
 
 #location-container {
+    position: relative;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 1);
@@ -427,6 +437,16 @@ a .dot:hover+.hide {
 #loc-data span {
     font-size: 22px;
     font-family: var(--title-font);
+}
+
+#location-container #footer {
+    width: 100%;
+    position: absolute;
+    bottom: 1%;
+    color: var(--light);
+    text-align: center;
+    font-family: var(--title-font);
+    opacity: 0.2;
 }
 
 
@@ -526,4 +546,15 @@ a .dot:hover+.hide {
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: darken;
     box-shadow: 0 0 10px 5px rgba(204, 172, 0, 0.7);
+}
+
+
+#contact-container #footer {
+    width: 100%;
+    position: absolute;
+    bottom: 1%;
+    color: var(--light);
+    text-align: center;
+    font-family: var(--title-font);
+    opacity: 0.2;
 }

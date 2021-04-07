@@ -50,6 +50,9 @@
                 </a>
             </div>
         </div>
+        <div id="footer">
+   <p>Antique Copyright &copy; 2021 All rights reserved | Build by /RZ</p>
+   </div>
     </div>
 <!-- Import fontawesome icons -->
 <script src="https://kit.fontawesome.com/415bbac1bd.js" crossorigin="anonymous"></script>

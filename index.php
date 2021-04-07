@@ -40,7 +40,9 @@
                 </a>
             </div>
         </div>
-      
+        <div id="footer">
+   <p>Antique Copyright &copy; 2021 All rights reserved | Build by /RZ</p>
+   </div>
     </div>
     </div>
 
