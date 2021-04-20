@@ -675,7 +675,11 @@ a .dot:hover+.hide {
     grid-template-columns: 3fr 7fr;
 }
 
-#dashboard #form-container {
+.hide{
+    display: none !important;
+}
+
+#dashboard #add-form-container {
     width: 100%;
     height: auto;
     padding: 30px;

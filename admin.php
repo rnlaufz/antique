@@ -24,7 +24,12 @@ if(mysqli_connect_errno()){
  <div id="admin-container">
     <h3>Manage events</h3>
     <div id="dashboard">
-        <div id="form-container">
+        <div id="actions">
+            <button id='add-button'>Add new event</button>
+            <button id='edit-button'>Edit existing event</button>
+            <button id='delete-button'>Delete event</button>
+        </div>
+        <div id="add-form-container" class="hide">
             <form action="">
                 <div class="form-control">
                     <input type="text" placeholder="Category">
@@ -49,120 +54,47 @@ if(mysqli_connect_errno()){
                 </div>
             </form>
         </div>
-        <div id="preview-container">
-        <div id="events-content">
-   <div class="event-cards">
-        <div class="event-card">
-            <div class="event-card-image">
-                <img src="stylesheets/img/card-one.jpg" alt="">
-            </div>
-            <div class="event-card-text">
-                <div class="event-card-text-wrap">
-                <p class="event-card-category">Lecture</p>
-                <h2 class="event-card-text-title">Archaic</h2>
-                <p class="event-card-text-description">Learn about the very begining of the greek sculpture art.</p>
-                <p class="event-card-text-info">
-                    <ul>
-                        <li>Days: Monday, Thursday</li>
-                        <li>Begining time: 12:00</li>
-                    </ul>
-                </p>
+        <div id="edit-form-container" class="hide">
+            <select name="events" id="events">
+                <option value="default" default>Select Event</option>
+                <option value="eventOne">Event One</option>
+                <option value="eventTwo">Event Two</option>
+            </select>
+            <form action="">
+                <div class="form-control">
+                    <input type="text" placeholder="Category">
                 </div>
-            </div>
-        </div>
-        <div class="event-card">
-            <div class="event-card-image">
-                <img src="stylesheets/img/card-two.jpg" alt="">
-            </div>
-            <div class="event-card-text">
-                <div class="event-card-text-wrap">
-                <p class="event-card-category">Lecture</p>
-                <h2 class="event-card-text-title">The early classics</h2>
-                <p class="event-card-text-description">Learn how the known art has been developed.</p>
-                <p class="event-card-text-info">
-                    <ul>
-                        <li>Days: Monday, Thursday</li>
-                        <li>Begining time: 15:00</li>
-                    </ul>
-                </p>
+                <div class="form-control">
+                    <input type="text" placeholder="Title">
                 </div>
-            </div>
-        </div>
-        <div class="event-card">
-            <div class="event-card-image">
-                <img src="stylesheets/img/card-three.jpg" alt="">
-            </div>
-            <div class="event-card-text">
-                <div class="event-card-text-wrap">
-                <p class="event-card-category">Lecture</p>
-                <h2 class="event-card-text-title">The high classics</h2>
-                <p class="event-card-text-description">Learn the history of the most popular creations.</p>
-                <p class="event-card-text-info">
-                    <ul>
-                        <li>Days: Tuesday, Friday</li>
-                        <li>Begining time: 12:00</li>
-                    </ul>
-                </p>
+                <div class="form-control">
+                    <input type="text" placeholder="Description">
                 </div>
-            </div>
-        </div>
-        <div class="event-card">
-            <div class="event-card-image">
-                <img src="stylesheets/img/card-four.jpg" alt="">
-            </div>
-            <div class="event-card-text">
-                <div class="event-card-text-wrap">
-                <p class="event-card-category">Tour</p>
-                <h2 class="event-card-text-title">Archaic</h2>
-                <p class="event-card-text-description">See and learn the acrhaic beauty.</p>
-                <p class="event-card-text-info">
-                    <ul>
-                        <li>Days: Monday, Wednesday, Friday</li>
-                        <li>Begining time: 14:00, 16:00</li>
-                    </ul>
-                </p>
+                <div class="form-control">
+                    <input type="text" placeholder="Days">
                 </div>
-            </div>
-        </div>
-        <div class="event-card">
-            <div class="event-card-image">
-                <img src="stylesheets/img/card-five.jpg" alt="">
-            </div>
-            <div class="event-card-text">
-                <div class="event-card-text-wrap">
-                <p class="event-card-category">Tour</p>
-                <h2 class="event-card-text-title">The high classics</h2>
-                <p class="event-card-text-description">The high classic palpable representation.</p>
-                <p class="event-card-text-info">
-                    <ul>
-                        <li>Days: Tuesday, Thursday</li>
-                        <li>Begining time: 14:00, 16:00, 17:00</li>
-                    </ul>
-                </p>
+                <div class="form-control">
+                    <input type="text" placeholder="Begining time">
                 </div>
-            </div>
-        </div>
-        <div class="event-card">
-            <div class="event-card-image">
-                <img src="stylesheets/img/card-six.jpg" alt="">
-            </div>
-            <div class="event-card-text">
-                <div class="event-card-text-wrap">
-                <p class="event-card-category">Exhibition</p>
-                <h2 class="event-card-text-title">Antique</h2>
-                <p class="event-card-text-description">Mordern art gracefully touches the ancient.</p>
-                <p class="event-card-text-info">
-                    <ul>
-                        <li>Days: Monday, Wednesday, Friday</li>
-                        <li>Begining time: anytime</li>
-                    </ul>
-                </p>
+                <div class="form-control">
+                    <input type="image" placeholder="Image">
                 </div>
-            </div>
+                <div class="form-control">
+                    <input type="submit" placeholder="Submit">
+                </div>
+            </form>
         </div>
-   </div>
+        <div id="delete-form-container" class="hide">
+            <select name="events" id="events">
+                <option value="default" default>Select Event</option>
+                <option value="eventOne">Event One</option>
+                <option value="eventTwo">Event Two</option>
+            </select>
         </div>
+        
     </div>
  </div>   
+
+ <script src="scripts/app.js"></script>
 </body>
 </html>
