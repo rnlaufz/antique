@@ -30,6 +30,14 @@ if(mysqli_connect_errno()){
             <button id='delete-button'>Delete event</button>
         </div>
         <div id="add-form-container" class="hide">
+            <div class="form-control">
+            <select name="events" id="add-events">
+                <option value="default" default>Select Event</option>
+                <option value="eventOne">Event One</option>
+                <option value="eventTwo">Event Two</option>
+            </select>
+            </div>
+       
             <form action="">
                 <div class="form-control">
                     <input type="text" placeholder="Category">
@@ -47,19 +55,26 @@ if(mysqli_connect_errno()){
                     <input type="text" placeholder="Begining time">
                 </div>
                 <div class="form-control">
-                    <input type="image" placeholder="Image">
+                    <div class="input__wrapper">
+                        <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+                        <label for="input__file" class="input__file-button">
+                            <span class="input__file-button-text">Image</span>
+                        </label>
+                    </div>
                 </div>
                 <div class="form-control">
-                    <input type="submit" placeholder="Submit">
+                    <input type="submit" placeholder="Submit" value="Add">
                 </div>
             </form>
         </div>
         <div id="edit-form-container" class="hide">
-            <select name="events" id="events">
+        <div class="form-control">
+            <select name="events" id="add-events">
                 <option value="default" default>Select Event</option>
                 <option value="eventOne">Event One</option>
                 <option value="eventTwo">Event Two</option>
             </select>
+            </div>
             <form action="">
                 <div class="form-control">
                     <input type="text" placeholder="Category">
@@ -77,19 +92,33 @@ if(mysqli_connect_errno()){
                     <input type="text" placeholder="Begining time">
                 </div>
                 <div class="form-control">
-                    <input type="image" placeholder="Image">
+                    <div class="input__wrapper">
+                        <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+                        <label for="input__file" class="input__file-button">
+                            <span class="input__file-button-text">Image</span>
+                        </label>
+                    </div>
                 </div>
                 <div class="form-control">
-                    <input type="submit" placeholder="Submit">
+                    <input type="submit" placeholder="Submit" value="Edit">
                 </div>
             </form>
         </div>
         <div id="delete-form-container" class="hide">
-            <select name="events" id="events">
+            <form action="">
+                <div class="form-control">
+                <select name="events" id="events">
                 <option value="default" default>Select Event</option>
                 <option value="eventOne">Event One</option>
                 <option value="eventTwo">Event Two</option>
             </select>
+                </div>
+          
+            <div class="form-control">
+                    <input type="submit" placeholder="Submit" value="Delete">
+                </div>
+            </form>
+           
         </div>
         
     </div>

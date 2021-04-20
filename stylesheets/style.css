@@ -652,6 +652,7 @@ a .dot:hover+.hide {
 
 /* Admin page */
 #admin-container {
+    position: relative;
     width: 100%;
     height: 100%;
     background: var(--dark-primary);
@@ -663,29 +664,99 @@ a .dot:hover+.hide {
 }
 
 #admin-container h3 {
+    position: absolute;
+    top: 2%;
     font-family: var(--title-font);
     font-size: 20px;
-
+    height: 10%;
 }
 
 #dashboard{
+    position: relative;
     width: 100%;
-    height: 90%;
-    display: grid;
-    grid-template-columns: 3fr 7fr;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+#actions {
+    position: absolute;
+    top: 4%;
+    width: 100%;
+    height: 80px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #737373;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 0 !important;
+}
+
+#actions button {
+    cursor: pointer;
+    width: 20%;
+    height: 45px;
+    padding: 5px;
+    color: #fff;
+    font-family: var(--text-font);
+    font-size: 20px;
+    font-weight: bold;
+    background: var(--gold-secondary);
+    border: 0;
+}
+
+#actions button:focus{
+    outline: none;
 }
 
 .hide{
     display: none !important;
 }
 
-#dashboard #add-form-container {
+#add-form-container, #edit-form-container, #delete-form-container {
     width: 100%;
-    height: auto;
-    padding: 30px;
+    position: absolute;
+    top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-#form-container form {
+#dashboard div select {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--gold-secondary);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--light);
+    font-family: var(--text-font);
+    font-size: 18px;
+    padding: 3px;
+}
+#dashboard div select option{
+    background: var(--dark-primary);
+    color: var(--light);
+    font-family: var(--text-font);
+    font-size: 18px;
+    border-bottom: 1px solid var(--gold-secondary);
+    border-left: 1px solid var(--gold-secondary);
+    border-right: 1px solid var(--gold-secondary);
+    border-top: 0;
+}
+
+#dashboard div select:focus{
+    outline: none;
+}
+
+
+
+#dashboard div form {
     width: 100%;
     height: 100%;
     display: flex;
@@ -694,18 +765,52 @@ a .dot:hover+.hide {
     justify-content: center;
 }
 
-#preview-container {
-    padding: 30px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#dashboard div form  input{
+    height: 40px;
 }
 
-#preview-container .event-cards {
+.input__wrapper {
     width: 100%;
-    height: auto;
-}
+    height: 100%;
+    position: relative;
+    text-align: center;
+  }
+   
+  .input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+   
+  .input__file-button-text {
+    font-family: var(--text-font);
+    color: var(--light);
+    font-size: 18px;
+    opacity: 0.3;
+    padding: 5px;
+  }
+   
+  .input__file-button {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--gold-secondary);
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
 
 /* Media queries */
 @media(max-width: 1370px){

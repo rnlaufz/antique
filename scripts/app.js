@@ -12,6 +12,25 @@ function myMap() {
     let map = new google.maps.Map(getMap, mapProps);
 };
 
+// Styling image input
+const inputs = document.querySelectorAll('.input__file');
+const input = document.getElementById('input__file');
+Array.prototype.forEach.call(inputs, function (input) {
+  let label = input.nextElementSibling,
+    labelVal = label.querySelector('.input__file-button-text').innerText;
+
+  input.addEventListener('change', function (e) {
+    let countFiles = '';
+    if (this.files && this.files.length >= 1)
+      countFiles = this.files.length;
+
+    if (countFiles)
+      label.querySelector('.input__file-button-text').innerText = 'Files selected: ' + countFiles;
+    else
+      label.querySelector('.input__file-button-text').innerText = labelVal;
+  });
+});
+
 // Get buttons
 const addNew = document.getElementById('add-button');
 const editBtn = document.getElementById('edit-button');
@@ -24,17 +43,26 @@ const deleteForm = document.getElementById('delete-form-container');
 
 // Add event listeners
 addNew.addEventListener('click', () => {
+    console.log(123)
     addForm.classList.toggle('hide')
     editForm.classList.add('hide')
     deleteForm.classList.add('hide')
 })
 editBtn.addEventListener('click', () => { 
+    console.log(123)
     editForm.classList.toggle('hide')
     addForm.classList.add('hide')
     deleteForm.classList.add('hide')
 })
 deleteBtn.addEventListener('click', () => { 
+    console.log(123)
     deleteForm.classList.toggle('hide')
     addForm.classList.add('hide')
     editForm.classList.add('hide')
 })
+
+// Debug
+const addSelector = document.getElementById('add-events');
+const editSelector = document.getElementById('edit-events');
+
+console.log(addSelector.parentElement, editSelector.parentElement)
