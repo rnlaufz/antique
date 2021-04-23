@@ -26,7 +26,7 @@ if(isset($_POST['signIn'])){
       $row = mysqli_fetch_array($checkDBQuery);
 
     //   Store user id
-      $_SESSION['id'] = $userID;
+      $_SESSION['admin_key'] = $adminKey;
       header('Location: admin.php');
       exit();
   }
