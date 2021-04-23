@@ -1,3 +1,9 @@
+<?php
+require 'config/config.php';
+require 'includes/form_handlers/login_handler.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +18,15 @@
     <div class="login-container">
     <div id="login-card">
     <h3>Antique Admin</h3>
-    <form action="">
+    <form action="loginadm.php" method="POST">
     <div class="form-control">
-    <input type="text" placeholder="Login" />
+    <input name="login" type="text" placeholder="Login" />
     </div>
     <div class="form-control">
-    <input type="password" placeholder="Password" />
+    <input name="password" type="password" placeholder="Password" />
     </div>
     <div class="form-control">
-    <input type="submit" value="Submit"  />
+    <input name="signIn" type="submit" value="Submit"  />
   
     </div>
     <br>

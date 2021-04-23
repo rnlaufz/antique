@@ -1,13 +1,5 @@
 <!-- PHP Block -->
-<?php
 
-$connectQuery = mysqli_connect("localhost", "root", "", "antique_events");
-
-if(mysqli_connect_errno()){
-    echo "Failed to connect: " - mysqli_connect_errno();
-};
-
-?>
 
 <!-- HTML Block -->
 <!DOCTYPE html>
