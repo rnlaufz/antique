@@ -1,5 +1,7 @@
 <!-- PHP Block -->
-
+<?php
+require 'config/config.php';
+?>
 
 <!-- HTML Block -->
 <!DOCTYPE html>
@@ -15,6 +17,12 @@
 <body>
  <div id="admin-container">
     <h3>Manage events</h3>
+    <div class="admin-nav">
+    <ul>
+    <li><a href="events.php">Events</a></li>
+    <li><a href="includes/handlers/logout.php">Logout</a></li>
+    </ul>
+    </div>
     <div id="dashboard">
         <div id="actions">
             <button id='add-button'>Add new event</button>
