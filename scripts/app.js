@@ -43,26 +43,17 @@ const deleteForm = document.getElementById('delete-form-container');
 
 // Add event listeners
 addNew.addEventListener('click', () => {
-    console.log(123)
     addForm.classList.toggle('hide')
     editForm.classList.add('hide')
     deleteForm.classList.add('hide')
 })
 editBtn.addEventListener('click', () => { 
-    console.log(123)
     editForm.classList.toggle('hide')
     addForm.classList.add('hide')
     deleteForm.classList.add('hide')
 })
 deleteBtn.addEventListener('click', () => { 
-    console.log(123)
     deleteForm.classList.toggle('hide')
     addForm.classList.add('hide')
     editForm.classList.add('hide')
 })
-
-// Debug
-const addSelector = document.getElementById('add-events');
-const editSelector = document.getElementById('edit-events');
-
-console.log(addSelector.parentElement, editSelector.parentElement)
