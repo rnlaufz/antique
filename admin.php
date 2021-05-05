@@ -1,6 +1,7 @@
 <!-- PHP Block -->
 <?php
 require 'config/config.php';
+require 'config/header.php';
 ?>
 
 <!-- HTML Block -->
