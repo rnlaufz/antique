@@ -2,6 +2,7 @@
 <?php
 require 'config/config.php';
 require 'config/header.php';
+require 'includes/form_handlers/add_event_handler.php';
 ?>
 
 <!-- HTML Block -->
@@ -31,40 +32,32 @@ require 'config/header.php';
             <button id='delete-button'>Delete event</button>
         </div>
         <div id="add-form-container" class="hide">
-            <div class="form-control">
-            <select name="events" id="add-events">
-                <option value="default" default>Select Event</option>
-                <option value="eventOne">Event One</option>
-                <option value="eventTwo">Event Two</option>
-            </select>
-            </div>
-       
-            <form action="">
+            <form action="admin.php" method="POST">
                 <div class="form-control">
-                    <input type="text" placeholder="Category">
+                    <input name="addcategory" type="text" placeholder="Category">
                 </div>
                 <div class="form-control">
-                    <input type="text" placeholder="Title">
+                    <input name="addtitle" type="text" placeholder="Title">
                 </div>
                 <div class="form-control">
-                    <input type="text" placeholder="Description">
+                    <input name="adddesc" type="text" placeholder="Description">
                 </div>
                 <div class="form-control">
-                    <input type="text" placeholder="Days">
+                    <input name="adddays" type="text" placeholder="Days">
                 </div>
                 <div class="form-control">
-                    <input type="text" placeholder="Begining time">
+                    <input name="addstartTime" type="text" placeholder="Begining time">
                 </div>
                 <div class="form-control">
                     <div class="input__wrapper">
-                        <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+                        <input name="addfile" type="file" id="input__file" class="input input__file" multiple>
                         <label for="input__file" class="input__file-button">
                             <span class="input__file-button-text">Image</span>
                         </label>
                     </div>
                 </div>
                 <div class="form-control">
-                    <input type="submit" placeholder="Submit" value="Add">
+                    <input name="addEvent" type="submit" placeholder="Submit" value="Add">
                 </div>
             </form>
         </div>
