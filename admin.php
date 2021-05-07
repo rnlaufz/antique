@@ -117,7 +117,7 @@ require 'includes/form_handlers/edit_event_handler.php';
                 <div class="form-control">
                     <div class="input__wrapper">
                         <input name="editFile" type="file" id="input__file" class="input input__file" multiple 
-                    ?>
+                    >
                         <label for="input__file" class="input__file-button">
                             <span class="input__file-button-text">Image</span>
                         </label>
