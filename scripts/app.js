@@ -41,19 +41,32 @@ const addForm = document.getElementById('add-form-container');
 const editForm = document.getElementById('edit-form-container');
 const deleteForm = document.getElementById('delete-form-container');
 
+
+// Get submits
+const submitAdd = document.getElementById('subAdd');
+
 // Add event listeners
 addNew.addEventListener('click', () => {
     addForm.classList.toggle('hide')
     editForm.classList.add('hide')
     deleteForm.classList.add('hide')
-})
+});
 editBtn.addEventListener('click', () => { 
     editForm.classList.toggle('hide')
     addForm.classList.add('hide')
     deleteForm.classList.add('hide')
-})
+});
 deleteBtn.addEventListener('click', () => { 
     deleteForm.classList.toggle('hide')
     addForm.classList.add('hide')
     editForm.classList.add('hide')
-})
+});
+
+
+// Get inputs
+
+
+// Check permission for form submitting
+function allowSubmit() {
+  
+}

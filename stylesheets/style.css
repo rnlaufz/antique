@@ -748,6 +748,19 @@ a .dot:hover+.hide {
     display: none !important;
 }
 
+#dashboard #messages-container {
+    width: 100%;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+}
+
+#dashboard #messages-container p {
+    font-family: var(--text-font);
+    font-size: 18px;
+    color: var(--light);
+}
+
 #add-form-container, #edit-form-container, #delete-form-container {
     width: 100%;
     position: absolute;
