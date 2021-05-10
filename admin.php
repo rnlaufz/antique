@@ -89,7 +89,7 @@ require 'includes/form_handlers/edit_event_handler.php';
                     
                 </div>
                 <div class="form-control">
-                    <input name="editTime" type="text" placeholder="Begining time">
+                    <input name="editTime" type="text" placeholder="Begining time" value="Value">
                     
                 </div>
                 <div class="form-control">
@@ -136,7 +136,11 @@ const selector = document.getElementById('add-events');
 // Get data from server 
 let getJSON = [<?php echo $json; ?>];
 const dataLength = getJSON[0].length;
-console.log(dataLength);
+// Get array with titles to fill selector and fill inputs
+let titles = getJSON[0].map( (item) => {return item.title});
+// Fill selector
+selector.innerHTML = titles.map(title => `<option>${title}</option>`);
+// Select event and fill inputs
 </script>
 </body>
 </html>
