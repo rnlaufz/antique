@@ -70,54 +70,31 @@ require 'includes/form_handlers/edit_event_handler.php';
         </div>
         <div id="edit-form-container" class="hide">
         <div class="form-control">
-        <form action="admin.php" method="POST">
             <select name="events" id="add-events">
-                <?php
-                foreach($titles as $title) {
-                    echo "<option>$title</option>";
-                }
-                
-                ?>
             </select>
-            <input type="submit" value="Submit" name="getEvent">
-            </form>
             </div>
             <form action="admin.php" method="POST">
                 <div class="form-control">
-                    <input name="editCategory" type="text" placeholder="Category" value="<?php
-                    echo $editCategory;
-                    ?>">
+                    <input name="editCategory" type="text" placeholder="Category">
                 </div>
                 <div class="form-control">
-                    <input name="editTitle" type="text" placeholder="Title" value="<?php
-                    echo $editTitle;
-                    ?>">
+                    <input name="editTitle" type="text" placeholder="Title">
                 </div>
                 <div class="form-control">
-                    <input name="editDescription" type="text" placeholder="Description"
-                    value="<?php
-                    echo $editDescription;
-                    ?>">
+                    <input name="editDescription" type="text" placeholder="Description">
                     
                 </div>
                 <div class="form-control">
-                    <input name="editDays" type="text" placeholder="Days"
-                    value="<?php
-                    echo $editDays;
-                    ?>">
+                    <input name="editDays" type="text" placeholder="Days">
                     
                 </div>
                 <div class="form-control">
-                    <input name="editTime" type="text" placeholder="Begining time"
-                    value="<?php
-                    echo $editTime;
-                    ?>">
+                    <input name="editTime" type="text" placeholder="Begining time">
                     
                 </div>
                 <div class="form-control">
                     <div class="input__wrapper">
-                        <input name="editFile" type="file" id="input__file" class="input input__file" multiple 
-                    >
+                    <input name="editFile" type="file" id="input__file" class="input input__file" multiple>
                         <label for="input__file" class="input__file-button">
                             <span class="input__file-button-text">Image</span>
                         </label>
@@ -152,9 +129,14 @@ require 'includes/form_handlers/edit_event_handler.php';
  </div>   
 
  <script src="scripts/app.js"></script>
- <script>
- const selectorEdit = document.getElementById('add-event');
- selectorEdit.addEventListener("change", (e) => {<?php $test = e.value ?>})
- </script>
+<script>
+// Get selector
+const selector = document.getElementById('add-events');
+
+// Get data from server 
+let getJSON = [<?php echo $json; ?>];
+const dataLength = getJSON[0].length;
+console.log(dataLength);
+</script>
 </body>
 </html>

@@ -49,7 +49,7 @@ if(isset($_POST['addEvent'])){
 
     // Check all inputs to be filled
    if($eventCategory == '' || $eventDescription == '' || $eventTime == '' || $eventTitle == '' || $eventImage == '' || $eventDays == ''){
-      
+    array_push($errorArray, "All inputs must be filled");
    }
 
     if(empty($errorArray)){

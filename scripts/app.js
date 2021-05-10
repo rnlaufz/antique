@@ -14,7 +14,7 @@ function myMap() {
 
 // Styling image input
 const inputs = document.querySelectorAll('.input__file');
-const input = document.getElementById('input__file');
+const input = document.getElementsByClassName('input__file');
 Array.prototype.forEach.call(inputs, function (input) {
   let label = input.nextElementSibling,
     labelVal = label.querySelector('.input__file-button-text').innerText;
@@ -62,11 +62,3 @@ deleteBtn.addEventListener('click', () => {
     editForm.classList.add('hide')
 });
 
-
-// Get inputs
-
-
-// Check permission for form submitting
-function allowSubmit() {
-  
-}
