@@ -4,6 +4,7 @@ require 'config/config.php';
 require 'config/header.php';
 require 'includes/form_handlers/add_event_handler.php';
 require 'includes/form_handlers/edit_event_handler.php';
+require 'includes/handlers/delete_event.php';
 ?>
 
 <!-- HTML Block -->
@@ -106,17 +107,19 @@ require 'includes/form_handlers/edit_event_handler.php';
             </form>
         </div>
         <div id="delete-form-container" class="hide">
-            <form action="">
+            <form action="admin.php" method="POST">
                 <div class="form-control">
                 <select name="events" id="events">
-                <option value="default" default>Select Event</option>
-                <option value="eventOne">Event One</option>
-                <option value="eventTwo">Event Two</option>
+                <?php
+                foreach($titles as $title){
+                    echo "<option>$title</option>";
+                }
+                ?>
             </select>
                 </div>
           
             <div class="form-control">
-                    <input type="submit" placeholder="Submit" value="Delete">
+                    <input type="submit" placeholder="Submit" name="deleteEvent" value="Delete">
                 </div>
             </form>
            
