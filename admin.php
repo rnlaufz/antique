@@ -70,28 +70,49 @@ require 'includes/handlers/delete_event.php';
             </form>
         </div>
         <div id="edit-form-container" class="hide">
-        <div class="form-control">
-            <select name="events" id="add-events">
+        <form action="admin.php" method="POST" id="editSelector">
+                <div class="form-control">
+                <select name="events" id="events">
+                <?php
+                foreach($titles as $title){
+                    echo "<option>$title</option>";
+                }
+                ?>
             </select>
-            </div>
-            <form action="admin.php" method="POST">
+                </div>
+          
+            <div class="form-control">
+                    <input type="submit" placeholder="Submit" name="getEvent" value="Edit">
+                </div>
+            </form> 
+            <form id="editForm" class="hide" action="admin.php" method="POST">
                 <div class="form-control">
-                    <input name="editCategory" type="text" placeholder="Category">
+                    <input name="editCategory" type="text" placeholder="Category" value="<?php
+                    echo $editCategory;
+                    ?>">
                 </div>
                 <div class="form-control">
-                    <input name="editTitle" type="text" placeholder="Title">
+                    <input id="editTitle" name="editTitle" type="text" placeholder="Title" value="<?php
+                    echo $editTitle;
+                    ?>">
                 </div>
                 <div class="form-control">
-                    <input name="editDescription" type="text" placeholder="Description">
+                    <input id="editDescription" name="editDescription" type="text" placeholder="Description" value="<?php
+                    echo $editDescription;
+                    ?>">
                     
                 </div>
                 <div class="form-control">
-                    <input name="editDays" type="text" placeholder="Days">
+                    <input id="editDays" name="editDays" type="text" placeholder="Days" value="<?php
+                    echo $editDays;
+                    ?>">
                     
                 </div>
                 <div class="form-control">
-                    <input name="editTime" type="text" placeholder="Begining time" value="Value">
-                    
+                    <input id="editTime" name="editTime" type="text" placeholder="Begining time" value="<?php
+                    echo $editTime;
+                    ?>">
+                
                 </div>
                 <div class="form-control">
                     <div class="input__wrapper">
@@ -133,17 +154,19 @@ require 'includes/handlers/delete_event.php';
 
  <script src="scripts/app.js"></script>
 <script>
-// Get selector
-const selector = document.getElementById('add-events');
-
 // Get data from server 
-let getJSON = [<?php echo $json; ?>];
-const dataLength = getJSON[0].length;
-// Get array with titles to fill selector and fill inputs
-let titles = getJSON[0].map( (item) => {return item.title});
-// Fill selector
-selector.innerHTML = titles.map(title => `<option>${title}</option>`);
-// Select event and fill inputs
+let showForm = '<?php echo $showf; ?>'
+const adminEditSelector = document.getElementById('editSelector')
+const adminEditForm = document.getElementById('editForm')
+const test = document.getElementById('input__file')
+
+if(showForm === "allowed"){
+    adminEditSelector.classList.add('hide');
+    adminEditForm.classList.remove('hide');
+    editForm.classList.remove('hide');
+}
+console.log(test.value)
+
 </script>
 </body>
 </html>

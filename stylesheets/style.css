@@ -771,7 +771,7 @@ a .dot:hover+.hide {
     flex-direction: column;
 }
 
-#dashboard div select {
+#dashboard div form select {
     margin-top: 20px;
     width: 100%;
     height: 40px;
@@ -783,7 +783,7 @@ a .dot:hover+.hide {
     font-size: 18px;
     padding: 3px;
 }
-#dashboard div select option{
+#dashboard div form select option{
     background: var(--dark-primary);
     color: var(--light);
     font-family: var(--text-font);
