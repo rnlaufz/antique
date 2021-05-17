@@ -43,26 +43,26 @@ if(isset($_POST['getEvent'])){
 }
 if(isset($_POST['editEvent'])){
     $editCategory = strip_tags($_POST['editCategory']);
-    $editCategory = str_replace(' ', '', $editCategory);
+    $editCategory = trim($editCategory);
     $editCategory = str_replace("'", "\'", $editCategory);
 
     $editTitle = strip_tags($_POST['editTitle']);
-    $editTitle = str_replace(' ', '', $editTitle);
+    $editTitle = trim($editTitle);
     $editTitle = str_replace("'", "\'", $editTitle);
     $editTitle = ucfirst($editTitle);
 
     $editDescription = strip_tags($_POST['editDescription']);
-    $editDescription = str_replace(' ', '', $editDescription);
+    $editDescription = trim($editDescription);
     $editDescription = str_replace("'", "\'", $editDescription);
     $editDescription = ucfirst($editDescription);
 
     $editDays = strip_tags($_POST['editDays']);
-    $editDays = str_replace(' ', '', $editDays);
+    $editDays = trim($editDays);
     $editDays = str_replace("'", "\'", $editDays);
     $editDays = ucfirst($editDays);
 
     $editTime = strip_tags($_POST['editTime']);
-    $editTime = str_replace(' ', '', $editTime);
+    $editTime = trim($editTime);
     $editTime = str_replace("'", "\'", $editTime);
     $editTime = ucfirst($editTime);
 

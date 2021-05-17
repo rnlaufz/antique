@@ -97,9 +97,9 @@ require 'includes/handlers/delete_event.php';
                     ?>">
                 </div>
                 <div class="form-control">
-                    <input id="editDescription" name="editDescription" type="text" placeholder="Description" value="<?php
+                    <textarea rows="4" cols="49" id="editDescription" name="editDescription"placeholder="Description"><?php
                     echo $editDescription;
-                    ?>">
+                    ?></textarea>
                     
                 </div>
                 <div class="form-control">
