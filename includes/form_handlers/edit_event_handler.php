@@ -2,10 +2,17 @@
 
 // Selected event 
 $event = 'Antique';
-$editImage;
 $errorArray = array();
 $showf = 'NOTallowed';
 $eventID;
+
+$editTime;
+$editTitle;
+$editImage;
+$editDescription;
+$editCategory;
+$editDays;
+
 
 // Fill selector
 // Get all titles
@@ -25,7 +32,6 @@ if(isset($_POST['getEvent'])){
     // Fill in inputs
     $callEventQuery = mysqli_query($connectQuery, "SELECT * FROM eventslist WHERE title='$event'");
     $row = mysqli_fetch_array($callEventQuery);
-
     // Fetch id
     $eventID = $row['id'];
     $_SESSION['getID'] = $eventID;
@@ -38,7 +44,12 @@ if(isset($_POST['getEvent'])){
     $editTime = $row['time'];
     $editImage = $row['image'];
 
+    // Set image session var
+    $_SESSION['edit-image'] = $editImage;
+
+    // Allow front fo show edit form
     $showf = 'allowed';
+
 
 }
 if(isset($_POST['editEvent'])){
@@ -66,11 +77,11 @@ if(isset($_POST['editEvent'])){
     $editTime = str_replace("'", "\'", $editTime);
     $editTime = ucfirst($editTime);
 
-    if(isset($_POST['editFile'])){
-        $editImage = $_POST['editFile'];
-    } 
-  
+    $editImage = $_POST['editFile']; 
 
+    if($editImage == ''){
+        $editImage = $_SESSION['edit-image'];
+    } 
 
     if($editCategory == '' || $editDescription == '' || $editTime == '' || $editTitle == ''|| $editDays == ''){
         array_push($errorArray, "All inputs must be filled");

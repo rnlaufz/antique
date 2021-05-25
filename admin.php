@@ -114,20 +114,9 @@ require 'includes/handlers/delete_event.php';
                     ?>">
                 
                 </div>
-                <!-- <div class="form-control">
-                    <div class="input__wrapper">
-                    <input name="editFile" type="file" id="input__file" class="input input__file" multiple>
-                        <label for="input__file" class="input__file-button">
-                            <span class="input__file-button-text">Image</span>
-                        </label>
-                    </div>
-                </div> -->
                 <div class="form-control">
                     <div class="input__wrapper">
-                    <input name="editFile" type="file" multiple>
-                        <label for="input__file" class="input__file-button">
-                            <span class="input__file-button-text">Image</span>
-                        </label>
+                    <input name="editFile" type="file">
                     </div>
                 </div>
                 <div class="form-control">
