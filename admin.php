@@ -58,7 +58,7 @@ require 'includes/handlers/delete_event.php';
                 </div>
                 <div class="form-control">
                     <div class="input__wrapper">
-                        <input name="addfile" type="file" id="input__file" class="input input__file" multiple>
+                        <input name="addFile" type="file" id="input__file" class="input input__file" multiple>
                         <label for="input__file" class="input__file-button">
                             <span class="input__file-button-text">Image</span>
                         </label>
@@ -100,7 +100,7 @@ require 'includes/handlers/delete_event.php';
                     <textarea rows="4" cols="49" id="editDescription" name="editDescription"placeholder="Description"><?php
                     echo $editDescription;
                     ?></textarea>
-                    
+                
                 </div>
                 <div class="form-control">
                     <input id="editDays" name="editDays" type="text" placeholder="Days" value="<?php
@@ -114,9 +114,17 @@ require 'includes/handlers/delete_event.php';
                     ?>">
                 
                 </div>
-                <div class="form-control">
+                <!-- <div class="form-control">
                     <div class="input__wrapper">
                     <input name="editFile" type="file" id="input__file" class="input input__file" multiple>
+                        <label for="input__file" class="input__file-button">
+                            <span class="input__file-button-text">Image</span>
+                        </label>
+                    </div>
+                </div> -->
+                <div class="form-control">
+                    <div class="input__wrapper">
+                    <input name="editFile" type="file" multiple>
                         <label for="input__file" class="input__file-button">
                             <span class="input__file-button-text">Image</span>
                         </label>
@@ -165,8 +173,6 @@ if(showForm === "allowed"){
     adminEditForm.classList.remove('hide');
     editForm.classList.remove('hide');
 }
-console.log(test.value)
-
 </script>
 </body>
 </html>

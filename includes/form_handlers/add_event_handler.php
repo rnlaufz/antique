@@ -38,7 +38,7 @@ if(isset($_POST['addEvent'])){
    $eventTime = str_replace("'", "\'", $eventTime);
    $eventTime = ucfirst($eventTime);
 
-   $eventImage = $_POST['addfile'];
+   $eventImage = $_POST['addFile'];
 
     // Set sessions
     $_SESSION['addCategory'] = $eventCategory;

@@ -30,6 +30,8 @@ Array.prototype.forEach.call(inputs, function (input) {
       label.querySelector('.input__file-button-text').innerText = labelVal;
   });
 });
+console.log(input)
+console.log(inputs)
 
 // Get buttons
 const addNew = document.getElementById('add-button');
