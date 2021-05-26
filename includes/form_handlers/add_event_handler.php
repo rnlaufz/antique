@@ -14,27 +14,27 @@ $messagesArray = array();
 
 if(isset($_POST['addEvent'])){
    $eventCategory = strip_tags($_POST['addcategory']);
-   $eventCategory = str_replace(' ', '', $eventCategory);
+   $eventCategory = trim($eventCategory);
    $eventCategory = str_replace("'", "\'", $eventCategory);
    $eventCategory = ucfirst($eventCategory);
 
    $eventTitle = strip_tags($_POST['addtitle']);
-   $eventTitle = str_replace(' ', '', $eventTitle);
+   $eventTitle = trim($eventTitle);
    $eventTitle = str_replace("'", "\'", $eventTitle);
    $eventTitle = ucfirst($eventTitle);
    
    $eventDescription = strip_tags($_POST['adddesc']);
-   $eventDescription = str_replace(' ', '', $eventDescription);
+   $eventDescription = trim($eventDescription);
    $eventDescription = str_replace("'", "\'", $eventDescription);
    $eventDescription = ucfirst($eventDescription);
 
    $eventDays = strip_tags($_POST['adddays']);
-   $eventDays = str_replace(' ', '', $eventDays);
+   $eventDays = trim($eventDays);
    $eventDays = str_replace("'", "\'", $eventDays);
    $eventDays = ucfirst($eventDays);
 
    $eventTime = strip_tags($_POST['addstartTime']);
-   $eventTime = str_replace(' ', '', $eventTime);
+   $eventTime = trim($eventTime);
    $eventTime = str_replace("'", "\'", $eventTime);
    $eventTime = ucfirst($eventTime);
 

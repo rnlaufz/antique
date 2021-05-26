@@ -20,7 +20,7 @@ $selectorQuery = mysqli_query($connectQuery, "SELECT * FROM eventslist");
 $titles = array();
 while($row = mysqli_fetch_array($selectorQuery)){
     $titles[] = $row['title'];
-}
+};
 // Titles are inserted in DOM in admin page
 
 // Select event
@@ -49,9 +49,7 @@ if(isset($_POST['getEvent'])){
 
     // Allow front fo show edit form
     $showf = 'allowed';
-
-
-}
+};
 if(isset($_POST['editEvent'])){
     $editCategory = strip_tags($_POST['editCategory']);
     $editCategory = trim($editCategory);
@@ -81,13 +79,16 @@ if(isset($_POST['editEvent'])){
 
     if($editImage == ''){
         $editImage = $_SESSION['edit-image'];
-    } 
+    }; 
 
     if($editCategory == '' || $editDescription == '' || $editTime == '' || $editTitle == ''|| $editDays == ''){
         array_push($errorArray, "All inputs must be filled");
-    }
-    $editQuery = mysqli_query($connectQuery, "UPDATE eventslist SET title='$editTitle', category='$editCategory', image='$editImage',description='$editDescription', time='$editTime', days='$editDays' WHERE id={$_SESSION["getID"]} LIMIT 1");
+    };
 
+    if(empty($errorArray)){
 
-}
+        $editQuery = mysqli_query($connectQuery, "UPDATE eventslist SET title='$editTitle', category='$editCategory', image='$editImage',description='$editDescription', time='$editTime', days='$editDays' WHERE id={$_SESSION["getID"]} LIMIT 1");
+
+    };
+};
 ?>

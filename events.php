@@ -1,12 +1,8 @@
 <!-- PHP Block -->
 <?php
-
-$connectQuery = mysqli_connect("localhost", "root", "", "antique");
-
-if(mysqli_connect_errno()){
-    echo "Failed to connect: " - mysqli_connect_errno();
-};
-
+require 'config/config.php';
+require 'config/header.php';
+require 'includes/handlers/get_event.php';
 ?>
 
 <!-- HTML Block -->
@@ -26,7 +22,52 @@ if(mysqli_connect_errno()){
        <h3>The museum is open from Monday to Friday, time 11:00-19:00. You can have some time on your own or partisipate in lecture or a tour.</h3>
 <div id="events-content">
    <div class="event-cards">
-        <div class="event-card">
+   <?php foreach($row as $obj){
+     echo '<div class="event-card">
+
+     <div class="event-card-image">
+         <img src="data:image/jpeg;base64,'.base64_encode($obj['image']).'" alt="">
+     </div>
+     <div class="event-card-text">
+         <div class="event-card-text-wrap">
+         <p class="event-card-category">'.$obj["category"].'</p>
+         <h2 class="event-card-text-title">'.$obj["title"].'</h2>
+         <p class="event-card-text-description">'.$obj["description"].'</p>
+         <p class="event-card-text-info">
+             <ul>
+                 <li>'.$obj["days"].'</li>
+                 <li>Begining time: '.$obj["time"].'</li>
+             </ul>
+         </p>
+         </div>
+     </div>
+ </div>';
+   } ?>
+
+<!-- 
+'<div class="event-card">
+
+      <div class="event-card-image">
+          <img src="stylesheets/img/card-one.jpg" alt="">
+      </div>
+      <div class="event-card-text">
+          <div class="event-card-text-wrap">
+          <p class="event-card-category">$obj["category"]</p>
+          <h2 class="event-card-text-title">$obj["title"]</h2>
+          <p class="event-card-text-description">$obj["description"]</p>
+          <p class="event-card-text-info">
+              <ul>
+                  <li$obj["days"]</li>
+                  <li>Begining time: $obj["category"]</li>
+              </ul>
+          </p>
+          </div>
+      </div>
+  </div>' -->
+
+
+        <!-- <div class="event-card">
+
             <div class="event-card-image">
                 <img src="stylesheets/img/card-one.jpg" alt="">
             </div>
@@ -131,7 +172,7 @@ if(mysqli_connect_errno()){
                         <li>Begining time: anytime</li>
                     </ul>
                 </p>
-                </div>
+                </div> -->
             </div>
         </div>
    </div>
@@ -161,5 +202,6 @@ if(mysqli_connect_errno()){
    <p>Antique Copyright &copy; 2021 All rights reserved | Build by /RZ</p>
    </div>
    </div>
+
 </body>
 </html>
