@@ -78,17 +78,18 @@ if(isset($_POST['editEvent'])){
     $editImage = $_POST['editFile']; 
 
     if($editImage == ''){
-        $editImage = $_SESSION['edit-image'];
+        $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='{$_SESSION["edit-image"]}' WHERE id={$_SESSION["getID"]} LIMIT 1");
+    } else {
+        $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='$editImage' WHERE id={$_SESSION["getID"]} LIMIT 1");  
     }; 
 
     if($editCategory == '' || $editDescription == '' || $editTime == '' || $editTitle == ''|| $editDays == ''){
         array_push($errorArray, "All inputs must be filled");
     };
 
-    if(empty($errorArray)){
+    $editQuery = mysqli_query($connectQuery, "UPDATE eventslist SET title='$editTitle', category='$editCategory',description='$editDescription', time='$editTime', days='$editDays' WHERE id={$_SESSION["getID"]} LIMIT 1");
 
-        $editQuery = mysqli_query($connectQuery, "UPDATE eventslist SET title='$editTitle', category='$editCategory', image='$editImage',description='$editDescription', time='$editTime', days='$editDays' WHERE id={$_SESSION["getID"]} LIMIT 1");
+    echo '123';
 
-    };
 };
 ?>

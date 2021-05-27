@@ -1,7 +1,6 @@
 <!-- PHP Block -->
 <?php
 require 'config/config.php';
-require 'config/header.php';
 require 'includes/handlers/get_event.php';
 ?>
 
