@@ -6,7 +6,7 @@
  $eventDescription = '';
  $eventDays = '';
  $eventTime = '';
- $eventImage;
+
 
 //  Maessages
 $errorArray = array();
@@ -38,7 +38,17 @@ if(isset($_POST['addEvent'])){
    $eventTime = str_replace("'", "\'", $eventTime);
    $eventTime = ucfirst($eventTime);
 
-   $eventImage = $_POST['addFile'];
+   $eventImage;
+
+   if(!empty($_FILES["addFile"]["name"])){
+       $eventImageName = basename($_FILES["addFile"]["name"]);
+       $eventImageType = pathinfo($eventImageName, PATHINFO_EXTENSION);
+        $allowTypes = array('jpg', 'jpeg', 'png');
+        if(in_array($eventImageType, $allowTypes)){
+            $img = $_FILES["addFile"]['tmp_name'];
+            $eventImage = addslashes(file_get_contents($img));
+        }
+   }
 
     // Set sessions
     $_SESSION['addCategory'] = $eventCategory;

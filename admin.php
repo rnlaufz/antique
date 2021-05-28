@@ -40,7 +40,7 @@ require 'includes/handlers/delete_event.php';
           <?php
         if(in_array("All inputs must be filled", $errorArray)) echo '<div id="messages-container"><p>All inputs must be filled</p></div>';
         ?>
-            <form action="admin.php" method="POST">
+            <form action="admin.php" method="POST"  enctype="multipart/form-data">
                 <div class="form-control">
                     <input name="addcategory" type="text" placeholder="Category">
                 </div>
@@ -70,7 +70,7 @@ require 'includes/handlers/delete_event.php';
             </form>
         </div>
         <div id="edit-form-container" class="hide">
-        <form action="admin.php" method="POST" id="editSelector">
+        <form action="admin.php" method="POST" id="editSelector"  enctype="multipart/form-data">
                 <div class="form-control">
                 <select name="events" id="events">
                 <?php

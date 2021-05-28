@@ -8,7 +8,7 @@ $eventID;
 
 $editTime;
 $editTitle;
-$editImage;
+$editImage = $_FILES;
 $editDescription;
 $editCategory;
 $editDays;
@@ -88,8 +88,5 @@ if(isset($_POST['editEvent'])){
     };
 
     $editQuery = mysqli_query($connectQuery, "UPDATE eventslist SET title='$editTitle', category='$editCategory',description='$editDescription', time='$editTime', days='$editDays' WHERE id={$_SESSION["getID"]} LIMIT 1");
-
-    echo '123';
-
 };
 ?>
