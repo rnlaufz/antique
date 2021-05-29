@@ -8,11 +8,10 @@ $eventID;
 
 $editTime;
 $editTitle;
-$editImage = $_FILES;
 $editDescription;
 $editCategory;
 $editDays;
-
+$getImage;
 
 // Fill selector
 // Get all titles
@@ -42,10 +41,10 @@ if(isset($_POST['getEvent'])){
     $editDescription = $row['description'];
     $editDays = $row['days'];
     $editTime = $row['time'];
-    $editImage = $row['image'];
+    $getImage = $row['image'];
 
     // Set image session var
-    $_SESSION['edit-image'] = $editImage;
+    $_SESSION['DBimage'] = $getImage;
 
     // Allow front fo show edit form
     $showf = 'allowed';
@@ -75,13 +74,21 @@ if(isset($_POST['editEvent'])){
     $editTime = str_replace("'", "\'", $editTime);
     $editTime = ucfirst($editTime);
 
-    $editImage = $_POST['editFile']; 
+   $editImage; 
+   if(!empty($_FILES["editFile"]["name"])){
+            $editImageName = basename($_FILES["editFile"]["name"]);
+            $editImageType = pathinfo($editImageName, PATHINFO_EXTENSION);
+             $allowTypes = array('jpg', 'jpeg', 'png');
+             if(in_array($editImageType, $allowTypes)){
+                 $img = $_FILES["editFile"]['tmp_name'];
+                 $editImage = addslashes(file_get_contents($img));
 
-    if($editImage == ''){
-        $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='{$_SESSION["edit-image"]}' WHERE id={$_SESSION["getID"]} LIMIT 1");
+                 $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='$editImage' WHERE id={$_SESSION["getID"]} LIMIT 1");
+             }
     } else {
-        $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='$editImage' WHERE id={$_SESSION["getID"]} LIMIT 1");  
-    }; 
+        $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='{$_SESSION["DBimage"]}' WHERE id={$_SESSION["getID"]} LIMIT 1");
+    } 
+   
 
     if($editCategory == '' || $editDescription == '' || $editTime == '' || $editTitle == ''|| $editDays == ''){
         array_push($errorArray, "All inputs must be filled");
