@@ -74,20 +74,22 @@ if(isset($_POST['editEvent'])){
     $editTime = str_replace("'", "\'", $editTime);
     $editTime = ucfirst($editTime);
 
-   $editImage; 
-   if(!empty($_FILES["editFile"]["name"])){
-            $editImageName = basename($_FILES["editFile"]["name"]);
-            $editImageType = pathinfo($editImageName, PATHINFO_EXTENSION);
-             $allowTypes = array('jpg', 'jpeg', 'png');
-             if(in_array($editImageType, $allowTypes)){
-                 $img = $_FILES["editFile"]['tmp_name'];
-                 $editImage = addslashes(file_get_contents($img));
-
-                 $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='$editImage' WHERE id={$_SESSION["getID"]} LIMIT 1");
-             }
+    if(!empty($_FILES["editFile"]["name"])){
+        echo 'fires one';
+        $editImageName = basename($_FILES["editFile"]["name"]);
+        $editImageType = pathinfo($editImageName, PATHINFO_EXTENSION);
+         $allowTypes = array('jpg', 'jpeg', 'png');
+         if(in_array($editImageType, $allowTypes)){
+             echo 'fires two';
+             $img = $_FILES["editFile"]['tmp_name'];
+             $editImage = addslashes(file_get_contents($img));
+             $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='$editImage' WHERE id={$_SESSION["getID"]} LIMIT 1");
+         }
     } else {
+        echo 'fires esle';
         $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='{$_SESSION["DBimage"]}' WHERE id={$_SESSION["getID"]} LIMIT 1");
     } 
+
    
 
     if($editCategory == '' || $editDescription == '' || $editTime == '' || $editTitle == ''|| $editDays == ''){

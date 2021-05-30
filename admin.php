@@ -70,7 +70,7 @@ require 'includes/handlers/delete_event.php';
             </form>
         </div>
         <div id="edit-form-container" class="hide">
-        <form action="admin.php" method="POST" id="editSelector"  enctype="multipart/form-data">
+        <form action="admin.php" method="POST" id="editSelector"  >
                 <div class="form-control">
                 <select name="events" id="events">
                 <?php
@@ -85,7 +85,7 @@ require 'includes/handlers/delete_event.php';
                     <input type="submit" placeholder="Submit" name="getEvent" value="Edit">
                 </div>
             </form> 
-            <form id="editForm" class="hide" action="admin.php" method="POST">
+            <form id="editForm" class="hide" action="admin.php" method="POST" enctype="multipart/form-data">
                 <div class="form-control">
                     <input name="editCategory" type="text" placeholder="Category" value="<?php
                     echo $editCategory;
@@ -116,7 +116,7 @@ require 'includes/handlers/delete_event.php';
                 </div>
                 <div class="form-control">
                     <div class="input__wrapper">
-                    <input name="editFile" type="file">
+                    <input name="editFile" type="file" multiple>
                     </div>
                 </div>
                 <div class="form-control">
