@@ -24,9 +24,9 @@ if(isset($_POST['signIn'])){
   $checkLoginQuery = mysqli_num_rows($checkDBQuery);
   if($checkLoginQuery == 1){
       $row = mysqli_fetch_array($checkDBQuery);
-
+      $adminKey = $row['token'];
     //   Store user id
-      $_SESSION['admin_key'] = $adminKey;
+      $_SESSION['token'] = $adminKey;
       header('Location: admin.php');
       exit();
   }

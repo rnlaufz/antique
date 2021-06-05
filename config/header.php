@@ -1,6 +1,6 @@
-<?
-if(isset($_SESSION['admin_key'])){
-$checkAdminKey = $_SESSION['admin_key'];
+<?php
+if(isset($_SESSION['token'])){
+    return true;
 } else {
     header("Location: loginadm.php");
 };

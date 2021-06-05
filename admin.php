@@ -129,9 +129,13 @@ require 'includes/handlers/delete_event.php';
                 <div class="form-control">
                 <select name="events" id="events">
                 <?php
+                if(sizeof($titles) == 0){
+                    echo "<option>No events found</option>";
+                } else {
                 foreach($titles as $title){
                     echo "<option>$title</option>";
                 }
+            }
                 ?>
             </select>
                 </div>
