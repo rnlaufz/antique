@@ -27,6 +27,8 @@ if(isset($_POST['signIn'])){
       $adminKey = $row['token'];
     //   Store user id
       $_SESSION['token'] = $adminKey;
+      $now = time();
+      $_SESSION['timeout'] = $now + 21600;
       header('Location: admin.php');
       exit();
   }
