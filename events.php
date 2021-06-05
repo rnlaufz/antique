@@ -42,7 +42,7 @@ require 'includes/handlers/get_event.php';
      </div>
  </div>';
    } ?>
-
+</div>
 <!-- 
 '<div class="event-card">
 
@@ -172,9 +172,8 @@ require 'includes/handlers/get_event.php';
                     </ul>
                 </p>
                 </div> -->
-            </div>
-        </div>
-   </div>
+
+
    <!-- Navigation -->
    <div id="nav-dots-container">
             <div class="nav-dots">
@@ -201,6 +200,9 @@ require 'includes/handlers/get_event.php';
    <p>Antique Copyright &copy; 2021 All rights reserved | Build by /RZ</p>
    </div>
    </div>
-
+<script>
+const checker = document.getElementById('footer');
+console.log(checker.parent)
+</script>
 </body>
 </html>
