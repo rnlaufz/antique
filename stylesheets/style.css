@@ -43,6 +43,30 @@ html, body, .container{
 }
 
 /* Utils */
+#messages-container{
+    width: 40%;
+    height: 3%;
+    text-align: center;
+    position: absolute;
+    top: 16%;
+    font-family: var(--text-font);
+    font-size: 18px;
+    color: var(--light);
+}
+
+#messages-container p {
+    padding: 2px 0;
+    font-weight: bold;
+}
+
+.error{
+    background: #cc4600;
+}
+
+.message {
+    background: #86cc00;
+}
+
 
 /* Buttons */
 .btn {
@@ -457,7 +481,6 @@ a .dot:hover+.hide {
 
 
 /* Contact section */
-
 #contact-container {
     position: relative;
     width: 100%;
@@ -748,18 +771,7 @@ a .dot:hover+.hide {
     display: none !important;
 }
 
-#dashboard #messages-container {
-    width: 100%;
-    height: 20px;
-    padding: 5px 0;
-    text-align: center;
-}
 
-#dashboard #messages-container p {
-    font-family: var(--text-font);
-    font-size: 18px;
-    color: var(--light);
-}
 
 #add-form-container, #edit-form-container, #delete-form-container {
     width: 100%;

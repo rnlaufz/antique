@@ -1,16 +1,15 @@
 <?php
 
+//  Messages
+$errorArray = array();
+$messagesArray = array();
+
  // Set variables
  $eventCategory = '';
  $eventTitle = '';
  $eventDescription = '';
  $eventDays = '';
  $eventTime = '';
-
-
-//  Maessages
-$errorArray = array();
-$messagesArray = array();
 
 if(isset($_POST['addEvent'])){
    $eventCategory = strip_tags($_POST['addcategory']);
@@ -50,6 +49,11 @@ if(isset($_POST['addEvent'])){
         }
    }
 
+    // Check all inputs to be filled
+    if($eventCategory == '' || $eventDescription == '' || $eventTime == '' || $eventTitle == '' || empty($_FILES["addFile"]["name"]) || $eventDays == ''){
+        array_push($errorArray, "All inputs must be filled");
+       };
+
     // Set sessions
     $_SESSION['addCategory'] = $eventCategory;
     $_SESSION['addTitle'] = $eventTitle;
@@ -57,13 +61,11 @@ if(isset($_POST['addEvent'])){
     $_SESSION['addDays'] = $eventDays;
     $_SESSION['addTime'] = $eventTime;
 
-    // Check all inputs to be filled
-   if($eventCategory == '' || $eventDescription == '' || $eventTime == '' || $eventTitle == '' || $eventImage == '' || $eventDays == ''){
-    array_push($errorArray, "All inputs must be filled");
-   }
-
     if(empty($errorArray)){
         $query = mysqli_query($connectQuery, "INSERT INTO eventslist VALUES('', '$eventTitle','$eventImage', '$eventCategory', '$eventDescription', '$eventTime', '$eventDays')"); 
+        
+    // Show success message
+    array_push($messagesArray, "Event successfully added");
 
         // Clear sessions
         $_SESSION['addCategory'] = '';
@@ -71,11 +73,8 @@ if(isset($_POST['addEvent'])){
         $_SESSION['addDescription'] = '';
         $_SESSION['addDays'] = '';
         $_SESSION['addTime'] = '';
-        // Show success message
-        array_push($messagesArray, "Event successfully added");
-    }
-
-
-
+      
+        
+    };
 }
 ?>

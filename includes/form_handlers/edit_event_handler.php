@@ -2,7 +2,8 @@
 
 // Selected event 
 $event = 'Antique';
-$errorArray = array();
+// $errorArray = array();
+// $messagesArray = array();
 $showf = 'NOTallowed';
 $eventID;
 
@@ -75,7 +76,6 @@ if(isset($_POST['editEvent'])){
     $editTime = ucfirst($editTime);
 
     if(!empty($_FILES["editFile"]["name"])){
-        echo 'fires one';
         $editImageName = basename($_FILES["editFile"]["name"]);
         $editImageType = pathinfo($editImageName, PATHINFO_EXTENSION);
          $allowTypes = array('jpg', 'jpeg', 'png');
@@ -86,16 +86,14 @@ if(isset($_POST['editEvent'])){
              $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='$editImage' WHERE id={$_SESSION["getID"]} LIMIT 1");
          }
     } else {
-        echo 'fires esle';
         $editImageQuery = mysqli_query($connectQuery, "UPDATE eventslist SET image='{$_SESSION["DBimage"]}' WHERE id={$_SESSION["getID"]} LIMIT 1");
     } 
-
-   
-
     if($editCategory == '' || $editDescription == '' || $editTime == '' || $editTitle == ''|| $editDays == ''){
         array_push($errorArray, "All inputs must be filled");
     };
 
-    $editQuery = mysqli_query($connectQuery, "UPDATE eventslist SET title='$editTitle', category='$editCategory',description='$editDescription', time='$editTime', days='$editDays' WHERE id={$_SESSION["getID"]} LIMIT 1");
+   if(empty($errorArray)){ 
+       $editQuery = mysqli_query($connectQuery, "UPDATE eventslist SET title='$editTitle', category='$editCategory',description='$editDescription', time='$editTime', days='$editDays' WHERE id={$_SESSION["getID"]} LIMIT 1");
+    array_push($messagesArray, 'Event data changed successfully');}
 };
 ?>

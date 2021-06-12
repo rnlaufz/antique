@@ -28,18 +28,20 @@ require 'includes/handlers/delete_event.php';
     </ul>
     </div>
     <div id="dashboard">
+     <!-- Show messages or errors -->
+     <?php
+        if(in_array("All inputs must be filled", $errorArray)) echo '<div id="messages-container" class="error"><p>All inputs must be filled</p></div>';
+        if(in_array("Event successfully added", $messagesArray)) echo '<div id="messages-container" class="message"><p>Event successfully added</p></div>';
+        if(in_array("Event data changed successfully", $messagesArray)) echo '<div id="messages-container" class="message"><p>Event data changed successfully</p></div>';
+    ?>
         <div id="actions">
             <button id='add-button'>Add new event</button>
             <button id='edit-button'>Edit existing event</button>
             <button id='delete-button'>Delete event</button>
         </div>
-      
-
+     
         <div id="add-form-container" class="hide">
-          <!-- Show messages or errors -->
-          <?php
-        if(in_array("All inputs must be filled", $errorArray)) echo '<div id="messages-container"><p>All inputs must be filled</p></div>';
-        ?>
+          
             <form action="admin.php" method="POST"  enctype="multipart/form-data">
                 <div class="form-control">
                     <input name="addcategory" type="text" placeholder="Category">
@@ -48,7 +50,8 @@ require 'includes/handlers/delete_event.php';
                     <input name="addtitle" type="text" placeholder="Title">
                 </div>
                 <div class="form-control">
-                    <input name="adddesc" type="text" placeholder="Description">
+                    <textarea rows="4" cols="49" id="addDescription" name="adddesc"placeholder="Description"></textarea>
+                
                 </div>
                 <div class="form-control">
                     <input name="adddays" type="text" placeholder="Days">
@@ -58,12 +61,10 @@ require 'includes/handlers/delete_event.php';
                 </div>
                 <div class="form-control">
                     <div class="input__wrapper">
-                        <input name="addFile" type="file" id="input__file" class="input input__file" multiple>
-                        <label for="input__file" class="input__file-button">
-                            <span class="input__file-button-text">Image</span>
-                        </label>
+                    <input name="addFile" type="file" multiple>
                     </div>
                 </div>
+              
                 <div class="form-control">
                     <input id="subAdd" name="addEvent" type="submit" value="Add">
                 </div>
