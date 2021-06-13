@@ -954,3 +954,56 @@ textarea:focus{
 
     
 }
+
+@media(max-width: 700px){
+    #img-container div{
+        width: 400px;
+        height: 400px;
+        left: -45%;
+    }
+
+    #info p {
+        font-size: 14px;
+    }
+
+    #footer p {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 680px){
+    #img-container div{
+        width: 400px;
+        height: 400px;
+        left: -155%;
+    }
+
+    #info {
+        flex: 2;
+    }
+
+    #main-content #footer {
+        right: 20%;
+        opacity: 0.8;
+    }
+}
+
+@media(max-width: 600px){
+    #img-container div{
+        width: 300px;
+        height: 300px;
+        left: -105%;
+    }
+}
+
+@media(max-height: 500px){
+    #info p {
+        font-size: 12px;
+    }
+
+    #img-container div{
+        width: 250px;
+        height: 250px;
+        left: -105%;
+    }
+}
