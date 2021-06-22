@@ -274,7 +274,7 @@ a .dot:hover+.hide {
 #events-content #nav-dots-container {
     position: absolute;
     top: 40%;
-    right: -4%;
+    right: -5%;
     width: 20px;
 }
 
@@ -929,6 +929,10 @@ textarea:focus{
         width: 500px;
         height: 500px;
     }
+
+    .event-cards {
+        grid-template-columns: repeat(2, 2fr);
+      }
 }
 @media(max-width: 870px){
     #img-container div {
@@ -939,7 +943,14 @@ textarea:focus{
     #info p {
         font-size: 18px;
     }
+
+    #contact-info p {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
 }
+
+
 @media(max-width: 795px){
     #img-container div {
         width: 400px;
@@ -978,6 +989,10 @@ textarea:focus{
     #footer p {
         font-size: 10px;
     }
+
+    #contact-container #nav-dots-container  .nav-dots .dot{
+        box-shadow: 0 0 10px var(--gold-secondary);
+    }
 }
 
 @media(max-width: 680px){
@@ -995,6 +1010,11 @@ textarea:focus{
         right: 20%;
         opacity: 0.8;
     }
+
+    #contact-info p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
 }
 
 @media(max-width: 600px){
@@ -1003,6 +1023,8 @@ textarea:focus{
         height: 300px;
         left: -105%;
     }
+
+    
 }
 
 @media(max-height: 500px){
@@ -1014,6 +1036,28 @@ textarea:focus{
         width: 250px;
         height: 250px;
         left: -105%;
+    }
+
+   
+}
+
+@media(max-width: 560px){
+    .event-cards {
+        grid-template-rows: repeat(auto-fill, 2fr);
+      }
+
+    #contact-info p {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    #contact-info h2 {
+        font-size: 18px;
+    }
+
+    #contact-info .icon {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -1033,11 +1077,7 @@ textarea:focus{
   #events-content{
       height: 73%;
   }
+
+
 }
 
-@media(max-width:870px){
-    #contact-info p {
-        font-size: 18px;
-        letter-spacing: 2px;
-    }
-}
