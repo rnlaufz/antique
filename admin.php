@@ -150,7 +150,10 @@ require 'includes/handlers/delete_event.php';
         
     </div>
     <div id="footer">
-   <p>Antique Copyright &copy; 2021 All rights reserved | Build by /RZ</p>
+   <p>
+   Admin Page
+   <br>
+   Antique Copyright &copy; 2021 All rights reserved | Build by /RZ</p>
    </div>
  </div>   
 
