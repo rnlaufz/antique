@@ -13,11 +13,21 @@ require 'includes/handlers/get_event.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/adaptive.css">
+    <link rel="stylesheet" href="stylesheets/mobile.css">
     <link rel="shortcut icon" href="stylesheets/img/favicon.png" type="image/x-icon">
     <title>Antique | Events</title>
 </head>
 <body>
-   <div id="events-container">  
+   <div id="events-container"> 
+   <div id="mobile-navigation">
+       <ul>
+           <li><a href="index.php">Home</a></li>
+           <li><a href="events.php" class="mobile-active">Events</a></li>
+           <li><a href="location.php">Location</a></li>
+           <li><a href="contact.php">Contact</a></li>
+        
+       </ul>
+   </div> 
        <h1>Come and get familliar with The Antique</h1>
        <h3>The museum is open from Monday to Friday, time 11:00-19:00. You can have some time on your own or partisipate in lecture or a tour.</h3>
 <div id="events-content">
@@ -35,8 +45,8 @@ require 'includes/handlers/get_event.php';
          <p class="event-card-text-description">'.$obj["description"].'</p>
          <p class="event-card-text-info">
              <ul>
-                 <li>'.$obj["days"].'</li>
-                 <li>Begining time: '.$obj["time"].'</li>
+                 <li class="event-card-text-info-li">'.$obj["days"].'</li>
+                 <li class="event-card-text-info-li">Begining time: '.$obj["time"].'</li>
              </ul>
          </p>
          </div>

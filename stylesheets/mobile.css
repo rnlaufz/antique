@@ -1,0 +1,71 @@
+@media(max-width: 414px){
+
+    /* Index page */
+
+    #info p {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    #info .btn {
+        width: 80%;
+    }
+
+    #img-container div {
+        left: -150%;
+        width: 250px;
+        height: 250px;
+    }
+
+   #main-content #nav-dots-container{
+       display: none;
+    }
+
+    /* Events page */
+    
+    #events-container h1 {
+    padding: 0 0 25px 0;
+    font-size: 14px;
+    }
+
+    #events-container h3 {
+    padding: 0 0 25px 0;
+    font-size: 12px;
+    width: 90%;
+    }
+
+    #events-content #nav-dots-container {
+        display: none;
+    }
+
+    #events-container #footer p{
+        font-size: 12px;
+    }
+
+    #mobile-navigation{
+        display: block;
+    }
+
+    
+#events-content{
+    height: 60%;
+}
+
+.event-card-text-title {
+    font-size: 12px;
+}
+
+.event-card-category{
+    font-size: 10px; 
+}
+.event-card-text-description {
+    font-size: 10px; 
+}
+
+.event-card-text-info-li {
+    font-size: 10px;
+}
+
+/* Location page */
+   /* Switch palces of map and info, add mobile navigation inside info section, reduce sizes */
+}

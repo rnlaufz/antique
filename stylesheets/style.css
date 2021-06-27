@@ -93,6 +93,40 @@ html, body, .container{
     text-shadow: 0 0 10px var(--dark-primary);
 }
 
+/* Mobile navigation */
+#mobile-navigation{
+    display: none;
+    width: 100%;
+    height: 2%;
+    position: absolute;
+    top: 1%;
+    margin-bottom: 10px;
+}
+
+#mobile-navigation ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+}
+
+#mobile-navigation ul li {
+    padding: 0px 5px;
+}
+
+#mobile-navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--text-font);
+    font-size: 12px;
+}
+
+#mobile-navigation ul li a.mobile-active{
+    color: var(--gold-primary);
+}
+
 /* Navigation */
 #nav-dots-container{
     width: 100px;
@@ -230,10 +264,12 @@ a .dot:hover+.hide {
 
 #main-content #footer {
     position: absolute;
+    width: 100%;
+    text-align: center;
     padding: 5px;
-    right: 0;
     bottom: 0;
-    opacity: 0.2;
+    left: 0;
+    opacity: 0.6;
     font-family: var(--title-font);
 }
 
@@ -241,6 +277,7 @@ a .dot:hover+.hide {
 /* Events section */
 
 #events-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -253,7 +290,7 @@ a .dot:hover+.hide {
 
 #events-container h1 {
     font-family: var(--title-font);
-    padding: 5px 0;
+    padding: 15px 0;
 }
 
 #events-container h3 {
@@ -374,7 +411,7 @@ a .dot:hover+.hide {
     margin: 5px 0 0 0;
 }
 
-.event-card-text-category, .event-card-text-description {
+.event-card-category, .event-card-text-description {
     text-transform: uppercase;
     font-size: 18px;
     opacity: 0.7;
@@ -384,10 +421,9 @@ a .dot:hover+.hide {
 .event-card-text-info ul {
     padding: 10px;
     list-style: none;
-    
 }
 
-.event-card-text-info ul li {
+.event-card-text-info-li{
     font-size: 16px;
 }
 

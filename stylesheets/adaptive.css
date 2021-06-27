@@ -68,16 +68,16 @@
 
 @media(max-width:720px){
 
-    #events-container h1 {
+     #events-container h1 {
         font-size: 22px;
-        position: absolute;
-        top: 2%;
+        /* position: absolute;
+        top: 2%; */
     }
 
-    #events-container h3{
+    /* #events-container h3{
         position: absolute;
         top: 6%;
-    }
+    } */
 
   #events-content{
       height: 73%;

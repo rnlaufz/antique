@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/adaptive.css">
+    <link rel="stylesheet" href="stylesheets/mobile.css">
     <link rel="shortcut icon" href="stylesheets/img/favicon.png" type="image/x-icon">
     <title>Antique</title>
 </head>
