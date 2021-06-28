@@ -1,3 +1,4 @@
+/* By width */
 @media(max-width: 414px){
 
     /* Index page */
@@ -67,5 +68,58 @@
 }
 
 /* Location page */
-   /* Switch palces of map and info, add mobile navigation inside info section, reduce sizes */
+ 
+#location-container {
+    display: flex;
+    flex-direction: column-reverse;
 }
+
+#location-container #nav-dots-container {
+    display: none;
+}
+#location-container #mobile-navigation {
+    display: block;
+}
+
+#loc-data h2 {
+    font-size: 16px;
+}
+
+#loc-data p {
+    width: 70%;
+}
+
+#loc-data p, #loc-data span {
+    font-size: 14px;
+}
+
+#location-container #footer {
+   display: none;
+} 
+
+/* Contact page */
+#contact-container {
+    flex-direction: column;
+}
+
+#contact-container #nav-dots-container {
+    display: none;
+}
+#contact-info {
+    width: 100%;
+    text-align: justify;
+    font-size: 14px;
+}
+
+#contact-info h2 {
+    align-self: center;
+    height: 10%;
+    font-size: 18px;
+}
+
+#contact-info p{
+    font-size: 12px;
+}
+}
+
+/* By height */

@@ -6,11 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/adaptive.css">
+    <link rel="stylesheet" href="stylesheets/mobile.css">
     <link rel="shortcut icon" href="stylesheets/img/favicon.png" type="image/x-icon">
     <title>Antique | Contact Us</title>
 </head>
 <body>
     <div id="contact-container">
+    <div id="mobile-navigation">
+       <ul>
+           <li><a href="index.php">Home</a></li>
+           <li><a href="events.php">Events</a></li>
+           <li><a href="location.php">Location</a></li>
+           <li><a href="contact.php" class="mobile-active">Contact</a></li>
+        
+       </ul>
+   </div> 
         <div id="contact-info">
         <h2>Contact Us</h2>
         <div id="contact-icons">

@@ -5,11 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/mobile.css">
     <link rel="shortcut icon" href="stylesheets/img/favicon.png" type="image/x-icon">
     <title>Antique | Find Us</title>
 </head>
 <body>
 <div id="location-container">
+<div id="mobile-navigation">
+       <ul>
+           <li><a href="index.php">Home</a></li>
+           <li><a href="events.php" >Events</a></li>
+           <li><a href="location.php" class="mobile-active">Location</a></li>
+           <li><a href="contact.php">Contact</a></li>
+        
+       </ul>
+   </div>
 <div id="map-frame">
     <div id="map"></div>
     
