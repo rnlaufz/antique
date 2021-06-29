@@ -54,6 +54,7 @@ require 'includes/handlers/get_event.php';
  </div>';
    } ?>
 </div>
+</div>
    <!-- Navigation -->
    <div id="nav-dots-container">
             <div class="nav-dots">
