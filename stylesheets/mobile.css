@@ -1,5 +1,13 @@
 /* By width */
-@media(max-width: 414px){
+@media(max-width:320px){
+    #img-container div {
+        left: -190%;
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+}
+@media(max-width: 450px){
 
     /* Index page */
 
@@ -13,9 +21,9 @@
     }
 
     #img-container div {
-        left: -150%;
-        width: 250px;
-        height: 250px;
+        left: -190%;
+        width: 300px;
+        height: 300px;
     }
 
    #main-content #nav-dots-container{
@@ -122,4 +130,18 @@
 }
 }
 
-/* By height */
+@media(max-height: 414px){
+    #main-content{
+        flex-direction: row-reverse;
+    }
+
+    #img-container div {
+        left: 15%;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+
+
