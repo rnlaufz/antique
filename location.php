@@ -11,7 +11,12 @@
 </head>
 <body>
 <div id="location-container">
-<div id="mobile-navigation">
+<div id="map-frame">
+    <div id="map"></div>
+    
+    </div>
+    <div id="location-info">
+    <div id="mobile-navigation">
        <ul>
            <li><a href="index.php">Home</a></li>
            <li><a href="events.php" >Events</a></li>
@@ -20,12 +25,7 @@
         
        </ul>
    </div>
-<div id="map-frame">
-    <div id="map"></div>
-    
-    </div>
-    <div id="location-info">
-    <div id="loc-data">
+    <div id="loc-data"> 
     <h2>Find Us</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, ut?</p>
     <span>Asgard city, Trollbergsgatan Str. 17</span>
