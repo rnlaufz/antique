@@ -43,15 +43,15 @@
     width: 90%;
     }
 
-    #events-content #nav-dots-container {
-        display: none;
+    #events-container #nav-dots-container {
+        display: none !important;
     }
 
     #events-container #footer p{
         font-size: 12px;
     }
 
-    #mobile-navigation{
+    #events-container #mobile-navigation{
         display: block;
     }
 
@@ -141,29 +141,59 @@
         height: 250px;
     }
 
-    #events-content #nav-dots-container{
-        display: none;
+    #events-container #nav-dots-container{
+        display: none !important;
+    }
+
+    #events-container #mobile-navigation {
+        display: block;
     }
 
     #events-container h1{
-        font-size: 14px;
+        font-size: 12px;
         padding: 0;
     }
     #events-container h3{
         font-size: 12px;
     }
 
+    #events-content {
+        height: 70%;  
+    }
+
+    .event-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .event-card{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .event-card::after, .event-card-image{
         display: none;
     }
 
+    .event-card:hover .event-card-text{
+        pointer-events: none;
+    }
+
     .event-card-text{
+        height: 100%;
+        width: 100%;
         display: block;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: none;
+        transform: none;
         opacity: 1;
+        padding: 3px 0;
+        margin: auto;
        
     }
 
@@ -173,18 +203,24 @@
     }
 
     .event-card-text-title{
-        font-size: 12px;
+        font-size: 14px;
         padding: 0;
+        margin: 0;
     }
 
     .event-card-category, .event-card-text-description, .event-card-text-info-li, #events-container #footer p{
-        font-size: 10px;
+        padding: 3px;
+        font-size: 12px;
         opacity: 1;
     }
 
     #events-container #footer{
         font-size: 11px;
         bottom: 0px;
+        opacity: 0.6;
+    }
+    #events-container #footer p{
+        font-size: 9px;
     }
 
     #events-content #nav-dots-container{
@@ -193,7 +229,26 @@
 
     #events-content #mobile-navigation {
         display: block;
+        height: 4%;
     }
+}
+
+@media(max-height:320px){
+    #events-container h1{
+        font-size: 10px;
+    }
+    #events-container h3{
+        font-size: 10px;
+    }
+
+    .event-card-text-title{
+        font-size: 10px;
+    }
+
+    .event-card-category, .event-card-text-description, .event-card-text-info-li, #events-container #footer p{
+        font-size: 8px;
+    }
+
 }
 
 

@@ -54,7 +54,7 @@ require 'includes/handlers/get_event.php';
  </div>';
    } ?>
 </div>
-</div>
+
    <!-- Navigation -->
    <div id="nav-dots-container">
             <div class="nav-dots">
@@ -76,10 +76,12 @@ require 'includes/handlers/get_event.php';
                 </a>
             </div>
         </div>
-   </div>
-   <div id="footer">
+        </div>
+        <div id="footer">
    <p>Antique Copyright &copy; 2021 All rights reserved | Build by /RZ</p>
    </div>
+   </div>
+  
    </div>
 </body>
 </html>
