@@ -130,7 +130,22 @@
 }
 }
 
+@media(max-height:540px){
+    #location-container #map-frame{
+        height:50%;
+     } 
+    
+    #loc-data h2 {
+        font-size: 22px;
+    }
+    
+    #loc-data p, #loc-data span {
+        font-size: 18px;
+    }
+}
+
 @media(max-height: 414px){
+    /* Index */
     #main-content{
         flex-direction: row-reverse;
     }
@@ -141,6 +156,7 @@
         height: 250px;
     }
 
+    /* Events */
     #events-container #nav-dots-container{
         display: none !important;
     }
@@ -231,7 +247,38 @@
         display: block;
         height: 4%;
     }
+
+    /* Location */
+    #location-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #location-info{
+       height:30%;
+    }
+
+    #loc-data h2 {
+        font-size: 14px;
+    }
+    
+    #loc-data p {
+        width: 70%;
+        padding: 5px;
+    }
+    
+    #loc-data p, #loc-data span {
+        font-size: 12px;
+    }
+
+    #location-container #nav-dots-container {
+        display: none;
+    }
+   
+    
 }
+
+
 
 @media(max-height:320px){
     #events-container h1{

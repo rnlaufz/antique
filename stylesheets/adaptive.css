@@ -67,24 +67,15 @@
     
 }
 
-
-
 @media(max-width:720px){
 
-     #events-container h1 {
+ #events-container h1 {
         font-size: 22px;
-        /* position: absolute;
-        top: 2%; */
     }
-
-    /* #events-container h3{
-        position: absolute;
-        top: 6%;
-    } */
-
   #events-content{
       height: 73%;
   }
+
 
 
 }
@@ -141,6 +132,20 @@
     
 }
 
+@media(max-width:720px){
+    #location-container #map-frame{
+        height:50%;
+     } 
+    
+    #loc-data h2 {
+        font-size: 22px;
+    }
+    
+    #loc-data p, #loc-data span {
+        font-size: 18px;
+    }
+}
+
 @media(max-height: 500px){
     #info p {
         font-size: 12px;
@@ -152,7 +157,6 @@
         left: -105%;
     }
 
-   
 }
 
 @media(max-width: 560px){
