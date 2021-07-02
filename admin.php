@@ -60,9 +60,8 @@ require 'includes/handlers/delete_event.php';
                     <input name="addstartTime" type="text" placeholder="Begining time">
                 </div>
                 <div class="form-control">
-                    <div class="input__wrapper">
-                    <input name="addFile" type="file" multiple>
-                    </div>
+                    <input id="addFile" name="addFile" type="file" multiple>
+                    <label id="addLabel" for="addFile">Add image</label>
                 </div>
               
                 <div class="form-control">
@@ -116,9 +115,8 @@ require 'includes/handlers/delete_event.php';
                 
                 </div>
                 <div class="form-control">
-                    <div class="input__wrapper">
-                    <input name="editFile" type="file" multiple>
-                    </div>
+                    <input id="editFile" name="editFile" type="file" multiple>
+                    <label id="editLabel" for="editFile">New image</label>
                 </div>
                 <div class="form-control">
                     <input name="editEvent" type="submit" placeholder="Submit" value="Edit">

@@ -904,6 +904,26 @@ a .dot:hover+.hide {
 textarea:focus{
     outline: none;
 }
+
+/* File inputs */
+#addFile, #editFile{
+    display: none;
+}
+
+#addLabel, #editLabel {
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin: auto;
+font-family: var(--text-font);  
+width: 100%;
+height: 100%;
+background: transparent;
+border: dotted 1px var(--gold-primary); 
+
+}
+
   #admin-container #footer {
       text-align: center;
       position: absolute;
